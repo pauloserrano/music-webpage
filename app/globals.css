@@ -5,3 +5,35 @@
 body {
   @apply bg-primary font-montserrat text-white;
 }
+
+.pretitle {
+  @apply font-alexBrush text-[42px] text-accent leading-none;
+}
+
+.h2 {
+  @apply text-[32px] xl:text-[38px] font-semibold leading-tight;
+}
+
+.btn {
+  @apply w-full rounded-full cursor-pointer transition-all flex justify-center items-center font-medium;
+}
+
+.btn-sm {
+  @apply w-[146px] h-[50px];
+}
+
+.btn-lg {
+  @apply w-[160px] h-[54px];
+}
+
+.btn-accent {
+  @apply bg-accent text-white hover:bg-accent-hover;
+}
+
+.btn-white {
+  @apply bg-white text-primary hover:bg-white/80;
+}
+
+.section {
+  @apply py-12 xl:py-24;
+}

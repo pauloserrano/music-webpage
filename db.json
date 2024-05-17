@@ -2,7 +2,7 @@
   "events": [
     {
       "id": 1,
-      "date": "2024-2-15",
+      "date": "2024-02-15T00:00:00",
       "location": {
         "city": "Los Angeles",
         "country": "USA",
@@ -16,7 +16,7 @@
     },
     {
       "id": 2,
-      "date": "2024-3-20",
+      "date": "2024-03-20T00:00:00",
       "location": {
         "city": "Rio de Janeiro",
         "country": "Brazil",
@@ -30,7 +30,7 @@
     },
     {
       "id": 3,
-      "date": "2024-4-10",
+      "date": "2024-04-10T00:00:00",
       "location": {
         "city": "Paris",
         "country": "France",
@@ -44,7 +44,7 @@
     },
     {
       "id": 4,
-      "date": "2024-6-25",
+      "date": "2024-06-25T00:00:00",
       "location": {
         "city": "Berlin",
         "country": "Germany",
@@ -58,7 +58,7 @@
     },
     {
       "id": 5,
-      "date": "2024-7-6",
+      "date": "2024-07-06T00:00:00",
       "location": {
         "city": "Athens",
         "country": "Greece",
@@ -72,7 +72,7 @@
     },
     {
       "id": 6,
-      "date": "2024-8-12",
+      "date": "2024-08-12T00:00:00",
       "location": {
         "city": "Bucharest",
         "country": "Romania",
@@ -86,7 +86,7 @@
     },
     {
       "id": 7,
-      "date": "2024-11-3",
+      "date": "2024-11-03T00:00:00",
       "location": {
         "city": "Warsaw",
         "country": "Poland",
@@ -377,37 +377,37 @@
   "posts": [
     {
       "id": 1,
-      "date": "2023-9-21",
+      "date": "2023-09-21T00:00:00",
       "title": "Rock Concert at Central Park",
       "description": "Join us for an electrifying night of classic rock hits at Central Park! The lineup includes tribute bands for legendary rock icons."
     },
     {
       "id": 2,
-      "date": "2023-9-22",
+      "date": "2023-09-22T00:00:00",
       "title": "Jazz Jam Session",
       "description": "Join us for an electrifying night of classic rock hits at Central Park! The lineup includes tribute bands for legendary rock icons."
     },
     {
       "id": 3,
-      "date": "2023-9-23",
+      "date": "2023-09-23T00:00:00",
       "title": "EDM Extravaganza",
       "description": "Join us for an electrifying night of classic rock hits at Central Park! The lineup includes tribute bands for legendary rock icons."
     },
     {
       "id": 4,
-      "date": "2023-9-27",
+      "date": "2023-09-27T00:00:00",
       "title": "Acoustic Coffeehouse",
       "description": "Join us for an electrifying night of classic rock hits at Central Park! The lineup includes tribute bands for legendary rock icons."
     },
     {
       "id": 5,
-      "date": "2023-10-1",
+      "date": "2023-10-01T00:00:00",
       "title": "Classical Symphony Showcase",
       "description": "Join us for an electrifying night of classic rock hits at Central Park! The lineup includes tribute bands for legendary rock icons."
     },
     {
       "id": 6,
-      "date": "2023-11-15",
+      "date": "2023-11-15T00:00:00",
       "title": "Rap Battle!",
       "description": "Join us for an electrifying night of classic rock hits at Central Park! The lineup includes tribute bands for legendary rock icons."
     }
