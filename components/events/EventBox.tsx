@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image"
-import { IEvent } from "./Events"
 import { RiMapPin2Fill } from "react-icons/ri"
+import { motion } from "framer-motion"
+import { fadeIn } from "@/variants"
+import { IEvent } from "./Events"
 
 interface EventBoxProps {
   events: IEvent[]
@@ -28,9 +32,14 @@ const EventBox = ({ events }: EventBoxProps) => {
   }
 
   return (
-    <div className="bg-secondary/60 rounded-[10px] p-4 xl:p-12 relative">
+    <motion.div 
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.3 }}
+      className="bg-secondary/60 rounded-[10px] p-4 xl:p-12 relative"
+    >
       <div className="flex flex-col xl:flex-row justify-between h-[620px] xl:h-full gap-x-4">
-        {/* image */}
         <div className="hidden xl:flex w-[400px]">
           <Image 
             alt=""
@@ -41,7 +50,6 @@ const EventBox = ({ events }: EventBoxProps) => {
             priority
           />
         </div>
-        {/* event list */}
         <ul className="flex-1 h-[500px] flex flex-col justify-between overflow-y-scroll scrollbar-thin scrollbar-thumb-accent scrollbar-track-white/10 xl:pr-6">
           {events.map(event => (
             <li key={event.id} className="flex flex-col xl:flex-row items-center justify-between xl:justify-start gap-y-4 xl:gap-y-0 xl:gap-x-4 text-center xl:text-left my-4 xl:my-0 border-b border-white/10 pb-10 xl:py-3 last-of-type:border-none first-of-type:pt-0">
@@ -60,14 +68,16 @@ const EventBox = ({ events }: EventBoxProps) => {
                   </div>
                 </div>
 
-                <div className="w-[100px] text-[17px] text-center text-accent font-bold">{`${event.priceRange.min}-${event.priceRange.max}${getCurrencySymbol(event.priceRange.currency)}`}</div>
+                <div className="w-[100px] text-[17px] text-center text-accent font-bold">
+                  {`${event.priceRange.min}-${event.priceRange.max}${getCurrencySymbol(event.priceRange.currency)}`}
+                </div>
 
                 <button className="btn btn-sm btn-accent xl:ml-auto">Get tickets</button>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
