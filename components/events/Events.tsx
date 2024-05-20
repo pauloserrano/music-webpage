@@ -16,14 +16,11 @@ export interface IEvent {
   }
 }
 
-async function getEvents(): Promise<IEvent[]> {
-  const res = await fetch(`${process.env.DB_BASE_URL}/events`)
-  return res.json()
+interface EventsProps {
+  events: IEvent[]
 }
 
-export const Events = async () => {
-  const events = await getEvents()
-  
+export const Events = async ({ events }: EventsProps) => {  
   return (
     <section className="section" id="tours">
       <div className="container mx-auto">
