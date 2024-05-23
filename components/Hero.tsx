@@ -46,12 +46,13 @@ export const Hero = ({ events }: HeroProps) => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]"
+                className="relative w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]"
               >
                 <Image 
                   alt="mia"
                   src="/assets/hero/typo-1.svg"
                   fill
+                  priority
                   className="object-contain"
                 />
               </motion.div>
@@ -67,7 +68,7 @@ export const Hero = ({ events }: HeroProps) => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]"
+                className=" relative w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]"
               >
                 <Image 
                   alt="reynolds"
@@ -88,7 +89,7 @@ export const Hero = ({ events }: HeroProps) => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity"
+                className="relative w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity"
               >
                 <Image 
                   alt="bird"

@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { fadeIn } from "@/variants"
-import { Nav, NavMobile } from "@/components"
+import { MenuBtn, Nav, NavMobile, Socials } from "@/components"
 
 export const Header = () => {
   const [active, setActive] = useState<boolean>(false);
@@ -32,13 +32,19 @@ export const Header = () => {
             alt=""
             src="/assets/header/logo.svg"
             fill
-            className="object-contain"
+            priority
+            className="object-contain relative"
           />
         </Link>
         <Nav containerStyles="hidden xl:flex items-center gap-x-8" />
         <NavMobile />
-        <div>menu btn</div>
-        <div>socials</div>
+        <div className="absolute right-7 top-9 z-10 xl:hidden">
+          <MenuBtn />
+        </div>
+        <Socials 
+          containerStyles="flex text-[24px] gap-x-4"
+          iconStyles="hover:text-accent transition-all"
+        />
       </div>
     </header>
   )

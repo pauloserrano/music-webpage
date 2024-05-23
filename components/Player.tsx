@@ -22,7 +22,6 @@ export const Player = () => {
                 alt="player-avatar"
                 src="/assets/player/avatar.png"
                 fill
-                priority
               />
             </div>
             <div className="leading-none text-white">
