@@ -1,5 +1,5 @@
 export const Header = () => {
   return (
-    <div>Header</div>
+    <header className="fixed z-50 w-full">Header</header>
   )
 }

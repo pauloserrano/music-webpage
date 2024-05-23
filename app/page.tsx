@@ -1,4 +1,4 @@
-import { Events, Hero, IEvent } from "@/components";
+import { Events, Hero, IEvent, Player } from "@/components";
 
 async function getEvents(): Promise<IEvent[]> {
   const res = await fetch(`${process.env.DB_BASE_URL}/events`)
@@ -11,6 +11,7 @@ export default async function Home() {
   return (
     <main>
       <Hero events={events} />
+      <Player />
       <Events events={events} />
       <div className="h-[4000px]"></div>
     </main>
