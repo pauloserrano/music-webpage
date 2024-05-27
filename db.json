@@ -102,7 +102,7 @@
   "albums": [
     {
       "id": 1,
-      "img": "/assets/albums/cover-1.png",
+      "img": "/assets/albums/cover/cover-1.png",
       "name": "Album 1",
       "tracks": [
         {
@@ -141,7 +141,7 @@
     },
     {
       "id": 2,
-      "img": "/assets/albums/cover-2.png",
+      "img": "/assets/albums/cover/cover-2.png",
       "name": "Album 1",
       "tracks": [
         {
@@ -180,7 +180,7 @@
     },
     {
       "id": 3,
-      "img": "/assets/albums/cover-3.png",
+      "img": "/assets/albums/cover/cover-3.png",
       "name": "Album 1",
       "tracks": [
         {
@@ -219,7 +219,7 @@
     },
     {
       "id": 4,
-      "img": "/assets/albums/cover-4.png",
+      "img": "/assets/albums/cover/cover-4.png",
       "name": "Album 1",
       "tracks": [
         {
@@ -258,7 +258,7 @@
     },
     {
       "id": 5,
-      "img": "/assets/albums/cover-5.png",
+      "img": "/assets/albums/cover/cover-5.png",
       "name": "Album 1",
       "tracks": [
         {
@@ -297,7 +297,7 @@
     },
     {
       "id": 6,
-      "img": "/assets/albums/cover-6.png",
+      "img": "/assets/albums/cover/cover-6.png",
       "name": "Album 1",
       "tracks": [
         {
@@ -336,7 +336,7 @@
     },
     {
       "id": 7,
-      "img": "/assets/albums/cover-7.png",
+      "img": "/assets/albums/cover/cover-7.png",
       "name": "Album 1",
       "tracks": [
         {
