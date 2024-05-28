@@ -19,8 +19,12 @@ export const AlbumSlider = () => {
     return fetch(process.env.NEXT_PUBLIC_DB_BASE_URL + url).then(res => res.json())
   })
 
-  if (error) return "Failed to fetch data"
-  if (!data) return "Loading..."
+  if (error) return (
+    <div className="text-center">Failed to fetch data</div>
+  )
+  if (!data) return (
+    <div className="text-center">Loading...</div>
+  )
 
   console.log(data)
 

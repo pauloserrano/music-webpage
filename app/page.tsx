@@ -1,7 +1,7 @@
-import { Albums, Events, Hero, IAlbum, IEvent, Player } from "@/components";
+import { Albums, Events, Hero, IEvent, Player } from "@/components";
 
 async function getEvents(): Promise<IEvent[]> {
-  const res = await fetch(`${process.env.DB_BASE_URL}/events`)
+  const res = await fetch(`${process.env.NEXT_PUBLIC_DB_BASE_URL}/events`)
   return res.json()
 }
 
@@ -14,7 +14,6 @@ export default async function Home() {
       <Player />
       <Events events={events} />
       <Albums />
-      <div className="h-[4000px]"></div>
     </main>
   );
 }
