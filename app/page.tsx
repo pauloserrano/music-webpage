@@ -16,7 +16,6 @@ export default async function Home() {
       <Albums />
       <Blog />
       <Newsletter />
-      <div className="h-[500px]"></div>
     </main>
   );
 }
