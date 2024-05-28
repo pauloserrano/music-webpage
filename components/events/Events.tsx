@@ -22,7 +22,7 @@ interface EventsProps {
 
 export const Events = async ({ events }: EventsProps) => {  
   return (
-    <section className="section" id="tours">
+    <section id="tours" className="section">
       <div className="container mx-auto">
         <SectionHeader pretitle="World Tour" title="Upcoming Events" />
         <EventBox events={events}/>

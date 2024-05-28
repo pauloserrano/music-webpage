@@ -35,7 +35,7 @@ body {
 }
 
 .section {
-  @apply py-12 xl:py-24;
+  @apply py-12 xl:py-20;
 }
 
 /* main player custom styles */

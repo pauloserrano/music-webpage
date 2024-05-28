@@ -18,7 +18,7 @@ export interface IAlbum {
 
 export const Albums = () => {
   return (
-    <section id="discography">
+    <section id="discography" className="section">
       <div className="container mx-auto">
         <SectionHeader pretitle="Discography" title="Popular Albums" />
         <motion.div
