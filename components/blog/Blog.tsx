@@ -19,7 +19,7 @@ export const Blog = async () => {
   return (
     <section id="blog" className="section">
       <div className="container mx-auto">
-        <SectionHeader pretitle="Our Blog" title="Latest News" />
+        <SectionHeader pretitle="Our Blog" title="Latest Posts" />
         <PostList posts={posts} />
       </div>
     </section>
