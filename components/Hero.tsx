@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation"
 import { motion } from "framer-motion"
 import { fadeIn } from "@/variants"
 import { IEvent } from "@/components"
+import { useFetch } from "@/hooks"
 
 
 function getLocationSequence(events: IEvent[]): (string | number)[] {
@@ -19,12 +20,8 @@ function getLocationSequence(events: IEvent[]): (string | number)[] {
   return locationSequence
 }
 
-interface HeroProps {
-  events: IEvent[]
-}
-
-export const Hero = ({ events }: HeroProps) => {
-  const locationSequence = getLocationSequence(events)
+export const Hero = () => {
+  const { data: events } = useFetch<IEvent[]>(`/events`)
 
   return (
     <section className="h-[80vh] xl:h-[850px]" id="home">
@@ -134,14 +131,17 @@ export const Hero = ({ events }: HeroProps) => {
                 fill
               />
             </div>
-            <TypeAnimation 
-              sequence={locationSequence}
-              wrapper="div"
-              speed={10}
-              deletionSpeed={10}
-              repeat={Infinity}
-              cursor={false} 
-            />
+            
+            {events && (
+              <TypeAnimation 
+                sequence={getLocationSequence(events)}
+                wrapper="div"
+                speed={10}
+                deletionSpeed={10}
+                repeat={Infinity}
+                cursor={false} 
+              />
+            )}
           </motion.div>
 
           <motion.div

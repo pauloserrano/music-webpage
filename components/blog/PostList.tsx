@@ -5,16 +5,22 @@ import { BsArrowRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { fadeIn } from '@/variants'
 import { IPost } from './Blog'
+import { useFetch } from '@/hooks'
 
-interface PostListProps {
-  posts: IPost[]
-}
+export const PostList = () => {
+  const { data: posts, error } = useFetch<IPost[]>(`/posts`)
 
-export const PostList = ({ posts }: PostListProps) => {
   function formatDate(date: string): string {
     const d = new Date(date)
     return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`
   }
+
+  if (error) return (
+    <div className="text-center">Failed to fetch data</div>
+  )
+  if (!posts) return (
+    <div className="text-center">Loading...</div>
+  )
 
   return (
     <motion.div
@@ -25,7 +31,7 @@ export const PostList = ({ posts }: PostListProps) => {
       className='flex flex-col items-center'
     >
       <div className='flex flex-col xl:flex-row justify-between gap-12 py-10 xl:pt-16 xl:pb-24 border-t border-white/10'>
-        {posts.slice(3).map((post) => (
+        {posts?.slice(3).map((post) => (
           <div key={post.id} className='flex-1'>
             <div className='text-accent font-bold mb-1'>{formatDate(post.date)}</div>
             <div className='text-xl font-medium mb-4'>{post.title}</div>

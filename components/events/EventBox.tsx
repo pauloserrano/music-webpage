@@ -4,13 +4,12 @@ import Image from "next/image"
 import { RiMapPin2Fill } from "react-icons/ri"
 import { motion } from "framer-motion"
 import { fadeIn } from "@/variants"
+import { useFetch } from "@/hooks";
 import { IEvent } from "./Events"
 
-interface EventBoxProps {
-  events: IEvent[]
-}
+const EventBox = () => {
+  const { data: events, error } = useFetch<IEvent[]>("/events")
 
-const EventBox = ({ events }: EventBoxProps) => {
   function getDay(date: string): number {
     return (new Date(date)).getDate()
   }
@@ -30,6 +29,13 @@ const EventBox = ({ events }: EventBoxProps) => {
       }
     ).replace(/\d/g, '').trim()
   }
+
+  if (error) return (
+    <div className="text-center">Failed to fetch data</div>
+  )
+  if (!events) return (
+    <div className="text-center">Loading...</div>
+  )
 
   return (
     <motion.div 

@@ -16,16 +16,12 @@ export interface IEvent {
   }
 }
 
-interface EventsProps {
-  events: IEvent[]
-}
-
-export const Events = async ({ events }: EventsProps) => {  
+export const Events = async () => {  
   return (
     <section id="tours" className="section">
       <div className="container mx-auto">
         <SectionHeader pretitle="World Tour" title="Upcoming Events" />
-        <EventBox events={events}/>
+        <EventBox />
       </div>
     </section>
   )

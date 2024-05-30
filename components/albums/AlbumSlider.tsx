@@ -1,13 +1,13 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
-import useSWR from "swr"
+import { useState } from "react"
 import { AudioPlayer } from "react-audio-play"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { EffectCoverflow, FreeMode, Navigation, Thumbs } from "swiper/modules"
 import { Swiper as SwiperType } from "swiper/types"
 import { IAlbum } from "./Albums"
+import { useFetch } from "@/hooks"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
@@ -15,18 +15,14 @@ import "swiper/css/pagination"
 
 export const AlbumSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState< SwiperType | null>(null)
-  const { data, error } = useSWR("/albums", (url: string) => {
-    return fetch(process.env.NEXT_PUBLIC_DB_BASE_URL + url).then(res => res.json())
-  })
-
+  const { data, error } = useFetch<IAlbum[]>("/albums")
+  
   if (error) return (
     <div className="text-center">Failed to fetch data</div>
   )
   if (!data) return (
     <div className="text-center">Loading...</div>
   )
-
-  console.log(data)
 
   return (
     <>
